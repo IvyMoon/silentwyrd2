@@ -1,0 +1,3334 @@
+/********************************** Universal *********************************/
+
+body {
+  font-family: 'Raleway';
+  color: Ivory;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #6B3B54;
+}
+
+a {
+  transition: color 0.35s;
+  text-decoration: none;
+  color: #8DD1FC;
+}
+
+a:hover { color: #EBCEFC; }
+
+#hiddenTop, #hiddenTop2 { 
+    display: flex;
+    z-index: 8000; } /* necessary for [top] to be clicked */
+
+#hiddenTop2 { display: none; }
+
+/*********************************** Menu *************************************/
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 5em;
+  border-bottom: 3px dotted rgba(98, 146, 175, 0.3);
+  width: 100%;
+  background: url("Brown.JPG") no-repeat left top;
+}
+
+.menu nav {
+  margin-left: 2.3%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#smallerMenu-Part1, #smallerMenu-Part2, #btnControl, #smallerMenu-Part3, #mobileHomeICON { display: none; }
+
+/********************* Menu: Silent Wyrd / Symbol SWITCH **********************/
+/********************* Menu: About Me / Fate Head SWITCH **********************/
+
+.theIconContainer {
+  position: relative;
+  margin-top: -10px;
+  width: 20px;
+  height: 0;
+}
+
+.theIcon { background-color: transparent; }
+
+.theIcon:hover { color: transparent; }
+
+.theIcon:hover .dropsIcon { display: block; }
+
+.theIcon-Button {
+  background-color: transparent;
+  border: none;
+}
+
+.dropsIcon {
+  width: 20px;
+  height: 0;
+  z-index: 5000;
+  display: none;
+  bottom: 50%;
+  top: -135px;
+  margin-left: -100.5%;
+  position: relative;
+}
+
+.dropsIcon:hover { color: transparent; }
+
+#theSilentWyrd {
+  color: Ivory;
+  font-family: "Dosis";
+}
+
+#boundary2 { /* Symbol */
+  display: flex;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  position: relative;
+  transform: scale(.25);
+}
+
+#theFatesHead {
+  color: #8DD1FC;
+}
+
+/****************** Menu: Stories Link / Story Dropdown Menu ******************/
+
+#theStoryMenuContainer {
+  position: relative;
+  top: .5px;
+  width: 50px;
+  height: 0;
+}
+
+#theStoryMenu { background-color: transparent; }
+
+#theStoryMenu:hover #drops { display: block; }
+
+#storiesLink {
+  color: #8DD1FC;
+  font-family: 'Raleway';
+  transition: color 0.35s;
+}
+
+#storiesLink:hover { color: #EBCEFC; }
+
+.dropdown {
+  background-color: transparent;
+  border: none;
+}
+
+#drops {
+  z-index: 5000;
+  display: none;
+  position: relative;
+  border: 3px solid transparent;
+  width: 150px;
+  height: 20px;
+  margin-left: -100%;
+}
+
+#drop1 {
+  text-align: center;
+  padding: 10px;
+  margin-top: 13px;
+  border: 3px solid #33C5CC;
+  background-color: #8DD1FC;
+}
+
+.dropStories {
+  text-align: center;
+  padding: 10px;
+  border-left: 3px solid #33C5CC;
+  border-right: 3px solid #33C5CC;
+  border-bottom: 3px solid #33C5CC;
+  background-color: #8DD1FC;
+}
+
+#drop1 a, #drop2 a, #drop3 a, #drop4 a, #drop5 a {
+  color: purple;
+  font-family: 'Handlee';
+}
+
+#drop1 a:hover, #drop2 a:hover, #drop3 a:hover, #drop4 a:hover, #drop5 a:hover { color: #DBA869; }
+
+/* Making Browser Smaller on Laptop/Desktop Menu */
+@media only screen and (max-width: 884px) {
+  div #late {
+    margin-top: -17.5%;
+    height: 0;
+    text-align: center;
+    width: 90px;
+  }
+}
+
+@media only screen and (max-width: 814px) {
+  .menu, #hiddenTop { display: none; }
+
+  #smallerMenu-Part1 {
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    border-bottom: 3px dotted rgba(98, 146, 175, 0.3);
+    width: 100%;
+    background: url("Brown.JPG") no-repeat left top;
+  }
+
+  #btnControl { display: none; }
+
+  .btn {
+    z-index: 10000;
+    width: 100%;
+    height: 5em;
+  }
+
+  input:checked + label {
+    animation-name: moveDown;
+    animation-iteration-count: 1;
+    animation-duration: 1.5s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes moveDown { 100% { margin-bottom: 61px; } }
+
+  #smallerMenu-Part1 a { margin-left: 3.5%; }
+
+  #smallerMenu-Part2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 3.5em;
+    border-bottom: 3px solid rgba(98, 146, 175, 0.3);
+    width: 100%;
+    background: rgba(60, 63, 81, 0.5);
+    margin-top: -58px;
+  }
+
+  #smallerMenu-Part2 nav {
+    margin-top: -2px;
+    margin-left: 3%;
+  }
+
+  #drops { margin-top: -21.5%; }
+
+  #theFatesHead { height: 0; }
+  
+  #hiddenTop2 {
+     display: flex;
+  }
+}
+
+@media only screen and (max-width: 551px) { /* was 630px */
+  #drops {
+    z-index: 5000;
+    display: none;
+    position: relative;
+    border: 3px solid transparent;
+    width: 150px;
+    height: 20px;
+    margin-left: -85%;
+  }
+}
+
+/* iPhone 4 and 4S Menu (Portrait) CHECK TO SEE HOW THIS LOOKS */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientatio: portrait) {
+    .menu, #hiddenTop, #smallerMenu-Part2, #theSilentWyrd { display: none; }
+    
+    #theStoryMenuContainer {
+        position: relative;
+        top: -40px;
+        left: 30px;
+        /*width: 50px;*/
+        height: 0;
+        /*border: 2px solid orange;*/
+        margin-right: -75px;
+        /*margin-left: 50px;*/
+    }
+    
+    #one-two {
+        position: relative;
+        height: 0;
+        top: -46px;
+        /*border: 2px solid pink;*/
+        margin-left: -25px;
+    }
+    
+    #smallerMenu-Part3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 3.5em;
+    border-bottom: 3px solid rgba(98, 146, 175, 0.3);
+    width: 100%;
+    background: rgba(60, 63, 81, 0.5);
+    margin-top: -58px;
+  }
+
+  #smallerMenu-Part3 nav {
+    width: 100%;
+    margin-top: -2px;
+    margin-left: 3%;
+  }
+    
+    #hiddenTop2 {
+     display: flex;
+  }
+
+    #smallerMenu-Part1 {
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /*height: 5em;*/
+      height: 15em;
+      border-bottom: 3px dotted rgba(98, 146, 175, 0.3);
+      width: 100%;
+      background: url("Brown.JPG") no-repeat left top;
+    }
+
+    #btnControl { display: none; }
+
+    .btn {
+      z-index: 10000;
+      width: 100%;
+      /*height: 5em;*/
+      height: 15em;
+    }
+
+    input:checked + label {
+      animation-name: moveDown;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-duration: 1.5s;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes moveDown { 100% { margin-bottom: 340px; } }
+
+    #smallerMenu-Part1 a { margin-left: 3.5%; }
+
+    #smallerMenu-Part3 {
+      font-size: 50px;
+      display: flex;
+      /*flex-direction: column;*/
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      /*height: 3.5em;*/
+      height: 400px;
+      border-bottom: 3px solid rgba(98, 146, 175, 0.3);
+      width: 100%;
+      background: rgba(60, 63, 81, 0.5);
+      margin: auto;
+      /*margin-top: -58px;*/
+      margin-top: -400px;
+    }
+    
+    #smallerMenu-Part3 nav ul {
+        /*border: 2px solid green;*/
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    #three {
+        margin-top: -95px;
+        height: 200px;
+        /*border: 2px solid yellow;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 200px;
+    }
+
+    #smallerMenu-Part3 nav {
+        margin-top: 250px;
+        /*border: 2px solid white;*/
+      /*margin-top: -2px;*/
+      margin-left: -1px;
+      width: 95%;
+    }
+
+    #drops { margin-top: -21.5%; }
+
+    #theFatesHead { height: 0; }
+
+    #drops {
+      z-index: 50000;
+      display: none;
+      position: relative;
+      border: 3px solid transparent;
+      width: 150px;
+      width: 300px;
+      height: 20px;
+      margin-left: -85%;
+    }
+    
+    #theSilentWyrd {
+      font-size: 100px;
+      /*transform: scale(3);*/
+    }
+    
+    #mobileHomeICON {
+        height: 0;
+        width: 0;
+        display: block;
+        position: relative;
+        left: -425px;
+        top: -406px;
+        /*display: block;*/
+        transform: scale(3.25);
+    }
+    
+    .dropsIcon {
+      /*margin-left: -25%;*/
+      margin-left: 0;
+    }
+    
+    div #late {
+    position: relative;
+    /*margin-top: -17.5%;*/
+    /*margin-top: -100px; /* from -150px to -100px */
+    /*height: 200px;*/
+    text-align: center;
+    bottom: 100px;
+    height: 0px;
+    width: 500px; /* from 400px to 500px*/
+  }
+}
+
+/* iPhone 5, 5S, 5C and 5SE Menu (Portrait) */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    .menu, #hiddenTop, #smallerMenu-Part2, #theSilentWyrd { display: none; }
+    
+    #theStoryMenuContainer {
+        position: relative;
+        top: -40px;
+        left: 30px;
+        /*width: 50px;*/
+        height: 0;
+        /*border: 2px solid orange;*/
+        margin-right: -75px;
+        /*margin-left: 50px;*/
+    }
+    
+    #one-two {
+        position: relative;
+        height: 0;
+        top: -46px;
+        /*border: 2px solid pink;*/
+        margin-left: -25px;
+    }
+    
+    #smallerMenu-Part3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 3.5em;
+    border-bottom: 3px solid rgba(98, 146, 175, 0.3);
+    width: 100%;
+    background: rgba(60, 63, 81, 0.5);
+    margin-top: -58px;
+  }
+
+  #smallerMenu-Part3 nav {
+    width: 100%;
+    margin-top: -2px;
+    margin-left: 3%;
+  }
+    
+    #hiddenTop2 {
+     display: flex;
+  }
+
+    #smallerMenu-Part1 {
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /*height: 5em;*/
+      height: 15em;
+      border-bottom: 3px dotted rgba(98, 146, 175, 0.3);
+      width: 100%;
+      background: url("Brown.JPG") no-repeat left top;
+    }
+
+    #btnControl { display: none; }
+
+    .btn {
+      z-index: 10000;
+      width: 100%;
+      /*height: 5em;*/
+      height: 15em;
+    }
+
+    input:checked + label {
+      animation-name: moveDown;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-duration: 1.5s;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes moveDown { 100% { margin-bottom: 340px; } }
+
+    #smallerMenu-Part1 a { margin-left: 3.5%; }
+
+    #smallerMenu-Part3 {
+      font-size: 50px;
+      display: flex;
+      /*flex-direction: column;*/
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      /*height: 3.5em;*/
+      height: 400px;
+      border-bottom: 3px solid rgba(98, 146, 175, 0.3);
+      width: 100%;
+      background: rgba(60, 63, 81, 0.5);
+      margin: auto;
+      /*margin-top: -58px;*/
+      margin-top: -400px;
+    }
+    
+    #smallerMenu-Part3 nav ul {
+        /*border: 2px solid green;*/
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    #three {
+        margin-top: -95px;
+        height: 200px;
+        /*border: 2px solid yellow;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 200px;
+    }
+
+    #smallerMenu-Part3 nav {
+        margin-top: 250px;
+        /*border: 2px solid white;*/
+      /*margin-top: -2px;*/
+      margin-left: -1px;
+      width: 95%;
+    }
+
+    #drops { margin-top: -21.5%; }
+
+    #theFatesHead { height: 0; }
+
+    #drops {
+      z-index: 50000;
+      display: none;
+      position: relative;
+      border: 3px solid transparent;
+      width: 150px;
+      width: 300px;
+      height: 20px;
+      margin-left: -85%;
+    }
+    
+    #theSilentWyrd {
+      font-size: 100px;
+      /*transform: scale(3);*/
+    }
+    
+    #mobileHomeICON {
+        height: 0;
+        width: 0;
+        display: block;
+        position: relative;
+        left: -425px;
+        top: -406px;
+        /*display: block;*/
+        transform: scale(3.25);
+    }
+    
+    .dropsIcon {
+      /*margin-left: -25%;*/
+      margin-left: 0;
+    }
+    
+    div #late {
+    position: relative;
+    /*margin-top: -17.5%;*/
+    /*margin-top: -100px; /* from -150px to -100px */
+    /*height: 200px;*/
+    text-align: center;
+    bottom: 100px;
+    height: 0px;
+    width: 500px; /* from 400px to 500px*/
+  }
+}
+
+/* iPhone 6, 6S, 7 and 8 Menu (Portrait) IS THIS THE SAME AS iPHONE X ? */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    .menu, #hiddenTop, #smallerMenu-Part2, #theSilentWyrd { display: none; }
+    
+    #theStoryMenuContainer {
+        position: relative;
+        top: -40px;
+        left: 30px;
+        /*width: 50px;*/
+        height: 0;
+        /*border: 2px solid orange;*/
+        margin-right: -75px;
+        /*margin-left: 50px;*/
+    }
+    
+    #one-two {
+        position: relative;
+        height: 0;
+        top: -46px;
+        /*border: 2px solid pink;*/
+        margin-left: -25px;
+    }
+    
+    #smallerMenu-Part3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 3.5em;
+    border-bottom: 3px solid rgba(98, 146, 175, 0.3);
+    width: 100%;
+    background: rgba(60, 63, 81, 0.5);
+    margin-top: -58px;
+  }
+
+  #smallerMenu-Part3 nav {
+    width: 100%;
+    margin-top: -2px;
+    margin-left: 3%;
+  }
+    
+    #hiddenTop2 {
+     display: flex;
+  }
+
+    #smallerMenu-Part1 {
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /*height: 5em;*/
+      height: 15em;
+      border-bottom: 3px dotted rgba(98, 146, 175, 0.3);
+      width: 100%;
+      background: url("Brown.JPG") no-repeat left top;
+    }
+
+    #btnControl { display: none; }
+
+    .btn {
+      z-index: 10000;
+      width: 100%;
+      /*height: 5em;*/
+      height: 15em;
+    }
+
+    input:checked + label {
+      animation-name: moveDown;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-duration: 1.5s;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes moveDown { 100% { margin-bottom: 340px; } }
+
+    #smallerMenu-Part1 a { margin-left: 3.5%; }
+
+    #smallerMenu-Part3 {
+      font-size: 50px;
+      display: flex;
+      /*flex-direction: column;*/
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      /*height: 3.5em;*/
+      height: 400px;
+      border-bottom: 3px solid rgba(98, 146, 175, 0.3);
+      width: 100%;
+      background: rgba(60, 63, 81, 0.5);
+      margin: auto;
+      /*margin-top: -58px;*/
+      margin-top: -400px;
+    }
+    
+    #smallerMenu-Part3 nav ul {
+        /*border: 2px solid green;*/
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    #three {
+        margin-top: -95px;
+        height: 200px;
+        /*border: 2px solid yellow;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 200px;
+    }
+
+    #smallerMenu-Part3 nav {
+        margin-top: 250px;
+        /*border: 2px solid white;*/
+      /*margin-top: -2px;*/
+      margin-left: -1px;
+      width: 95%;
+    }
+
+    #drops { margin-top: -21.5%; }
+
+    #theFatesHead { height: 0; }
+
+    #drops {
+      z-index: 50000;
+      display: none;
+      position: relative;
+      border: 3px solid transparent;
+      width: 150px;
+      width: 300px;
+      height: 20px;
+      margin-left: -85%;
+    }
+    
+    #theSilentWyrd {
+      font-size: 100px;
+      /*transform: scale(3);*/
+    }
+    
+    #mobileHomeICON {
+        height: 0;
+        width: 0;
+        display: block;
+        position: relative;
+        left: -425px;
+        top: -406px;
+        /*display: block;*/
+        transform: scale(3.25);
+    }
+    
+    .dropsIcon {
+      /*margin-left: -25%;*/
+      margin-left: 0;
+    }
+    
+    div #late {
+    position: relative;
+    /*margin-top: -17.5%;*/
+    /*margin-top: -100px; /* from -150px to -100px */
+    /*height: 200px;*/
+    text-align: center;
+    bottom: 100px;
+    height: 0px;
+    width: 500px; /* from 400px to 500px*/
+  }
+
+}
+
+/* ipad mini menu */
+@media only screen and
+  (min-device-width: 768px) and
+  (max-device-width: 1024px) and
+  (-webkit-min-device-pixel-ratio: 1) {
+    .menu { display: none; }
+
+    #smallerMenu-Part1 {
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 5em;
+      border-bottom: 3px dotted rgba(98, 146, 175, 0.3);
+      width: 100%;
+      background: url("Brown.JPG") no-repeat left top;
+    }
+
+    #btnControl { display: none; }
+
+    .btn {
+      z-index: 10000;
+      width: 100%;
+      height: 5em;
+    }
+
+    input:checked + label {
+      animation-name: moveDown;
+      animation-iteration-count: 1;
+      animation-duration: 1.5s;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes moveDown { 100% { margin-bottom: 61px; } }
+
+    #smallerMenu-Part1 a { margin-left: 3.5%; }
+
+    #smallerMenu-Part2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 3.5em;
+      border-bottom: 3px solid rgba(98, 146, 175, 0.3);
+      width: 100%;
+      background: rgba(60, 63, 81, 0.5);
+      margin-top: -58px;
+    }
+
+    #smallerMenu-Part2 nav {
+      margin-top: -2px;
+      margin-left: 3%;
+    }
+
+    #drops { margin-top: -21.5%; }
+
+    #theFatesHead { height: 0; }
+
+    #drops {
+      z-index: 5000;
+      display: none;
+      position: relative;
+      border: 3px solid transparent;
+      width: 150px;
+      height: 20px;
+      margin-left: -85%;
+    }
+}
+
+/* Nonsensical Tidbits of Gibberish -- Ralph the Garden Gnome */
+
+#ralphTheGardenGnomeContainer { width: 100%; }
+
+section {
+  z-index: 1003;
+  width: 100%;
+  border: 3px solid rgba(141,209,252,0.5);
+  border-left: none;
+  border-right: none;
+  margin-top: 1.5rem;
+  background: #1F797D;
+}
+
+.quote {
+  display: flex;
+  justify-content: center;
+  font-family: 'Raleway';
+}
+
+.quote p {
+  word-spacing: 0.03rem;
+  line-height: 1.22rem;
+  padding: 0 2em;
+  text-align: center;
+}
+
+.symbol, #flippedSymbol {
+  height: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85
+}
+
+.symbol p, #flippedSymbol p {
+  line-height: 0.72rem;
+}
+
+#psi, #psi2 {
+  padding-left: 0.035rem;
+}
+
+#flippedSymbol p {
+  transform: rotate(180deg);
+}
+
+/* ************************* About Me **************************** */
+
+#howdy {
+  font-family: 'Handlee';
+  font-size: 2.25rem;
+  margin-top: 2%;
+  margin-bottom: 1.5%;
+}
+
+#welcome {
+  height: 85%;
+  width: 85%;
+  border: 3px dotted #DBA869;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 3%;
+  z-index: 1000;
+}
+
+#welcome img {
+  border: 3px dotted #DBA869;
+  border-top: none;
+  height: 450px;
+  width: 450px;
+}
+
+#welcomeMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1002;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#welcomeMessage p {
+  text-align: center;
+  font-family: 'Dosis';
+  font-size: 1.5rem;
+}
+
+#ralphPicture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 250px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+#RalphRegainedConsciousnessContainer {
+  height: 85%;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3%;
+  z-index: 1000;
+}
+
+#RalphRegainedConsciousnessContainer img {
+  border: 3px solid Ivory;
+  height: 450px;
+  width: 450px;
+}
+
+#crazyFace {
+    font-size: 50px;
+}
+
+/* Lenovo fix for Welcome image */
+@media screen and (min-width: 1800px), (max-width: 3200px) {
+    #welcome img, #RalphRegainedConsciousnessContainer img {
+      height: auto;
+    }
+}
+
+@media only screen and (max-width: 548px) {
+  #welcome {
+    border: none;
+  }
+
+  #welcome img {
+    border: 3px dotted #DBA869;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #RalphRegainedConsciousnessContainer {
+      width: 100%;
+      height: 100%;
+  }
+}
+
+/* iPhone 4 and 4S Quote and Welcome (Portrait) EMPTY */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+
+  }
+
+/* iPhone 5, 5S, 5C and 5SE Quote and Welcome (Portrait) EMPTY */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    .symbol, #flippedSymbol {
+      height: 4em;
+      margin-top: 2em;
+    }
+
+    #flippedSymbol {
+      margin-bottom: 2em;
+    }
+
+    .symbol p, #flippedSymbol p {
+      font-size: 3.25rem;
+      line-height: 2.3rem;
+    }
+
+    .quote p {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin-top: 1.5em;
+    }
+
+    #howdy {
+      /*font-size: 3.5rem;*/
+      font-size: 85px;
+      line-height: 2rem;
+      /*margin-bottom: 1.5rem;*/
+      margin-top: 45px; /* added this guy */
+      margin-bottom: 45px;
+    }
+
+    #welcome {
+      border: none;
+      width: 95%;
+      height: 95%;
+    }
+
+    #welcome img {
+      border: 3px dotted #DBA869;
+      width: 100%;
+      height: 100%;
+    }
+    
+    #welcomeMessage p {
+        font-size: 60px;
+    }
+
+    /*#gnome span p {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }*/
+    
+    /*#ralph1 {
+        border: none;
+    }*/
+    
+    #RalphRegainedConsciousnessContainer {
+      width: 95%;
+      height: 95%;
+    }
+    
+    #RalphRegainedConsciousnessContainer img {
+      width: 100%;
+      height: 100%;
+    }
+    
+    #crazyFace {
+    font-size: 100px;
+    }
+}
+
+/* iPhone 5, 5S, 5C and 5SE Quote and Welcome (Landscape) EMPTY */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: landscape) {
+
+    #welcome {
+      border-radius: 0%;
+    }
+
+    #howdy {
+      font-size: 2.5rem;
+      line-height: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /*#gnome span p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }*/
+}
+
+/* iPhone 6, 6S, 7 and 8 Quote and Welcome (Portrait) IS THIS THE SAME AS iPHONE X ? EMPTY */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+
+    .symbol, #flippedSymbol {
+      height: 4em;
+      margin-top: 2em;
+    }
+
+    #flippedSymbol {
+      margin-bottom: 2em;
+    }
+
+    .symbol p, #flippedSymbol p {
+      font-size: 3.25rem;
+      line-height: 2.3rem;
+    }
+
+    .quote p {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin-top: 1.5em;
+    }
+
+    #howdy {
+      /*font-size: 3.5rem;*/
+      font-size: 85px;
+      line-height: 2rem;
+      /*margin-bottom: 1.5rem;*/
+      margin-top: 45px; /* added this guy */
+      margin-bottom: 45px;
+    }
+
+    #welcome {
+      border: none;
+      width: 95%;
+      height: 95%;
+    }
+
+    #welcome img {
+      border: 3px dotted #DBA869;
+      width: 100%;
+      height: 100%;
+    }
+    
+    #welcomeMessage p {
+        font-size: 60px;
+    }
+
+    /*#gnome span p {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }*/
+    
+    /*#ralph1 {
+        border: none;
+    }*/
+    
+    #RalphRegainedConsciousnessContainer {
+      width: 95%;
+      height: 95%;
+    }
+    
+    #RalphRegainedConsciousnessContainer img {
+      width: 100%;
+      height: 100%;
+    }
+}
+
+/* iPad 1, 2, Mini and Air Quote and Welcome (Portrait AND Landscape) EMPTY */
+@media only screen and
+  (min-device-width: 768px) and
+  (max-device-width: 1024px) and
+  (-webkit-min-device-pixel-ratio: 1) {
+
+    /*.quote p {
+      font-size: 1.5rem;
+      line-height: 2.16rem;
+    }
+
+    #howdy {
+      font-size: 2.5rem;
+      line-height: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    #welcome {
+      border-radius: 0%;
+    }
+
+    #gnome span p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }*/
+}
+
+/* Stories */
+
+#fateBeStrangeContainer {
+  width: 100%;
+}
+
+#stories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#storiesTitleFate {
+  padding: 1.125em 0;
+  font-size: 2.5em;
+  font-family: 'Dosis';
+}
+
+.scroll { /* Scroll the boxes to see more of each story! */
+  position: relative;
+  top: 1.5em;
+  opacity: 0.7;
+}
+
+.links, .links-NG {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3em;
+  width: 100%;
+}
+
+#storiesDesc {
+  font-size: 1em;
+  font-family: 'Handlee';
+}
+
+.story {
+  transition: box-shadow 0.95s;
+  padding-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border: 3px dotted #DBA869;
+  overflow-y: scroll;
+  color: Ivory;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.story a { font-family: 'Handlee'; }
+
+.story:hover { box-shadow: 0px 30px 100px rgba(219,168,105,.4); }
+
+#strangeAttraction { background: url("Brown.JPG") no-repeat left center; }
+
+#foodFreedom { background-color: #6E4443; }
+
+#chimneySweep {
+  background: url("blackAndWhiteMoodyTrees.JPG") no-repeat center center;
+  opacity: 0.7;
+}
+
+#pumpkinsDelirium { background: url("FallLeaf.JPG") no-repeat right bottom; }
+
+#marigold { background: url("BackyardSunshine.JPG") no-repeat center left; }
+
+.smallerLinks3OnRow { display: none; } /* for stories and nonsensical gibberish */
+
+.smallerLinks, .smallerLinks-PHONE, .smallerLinks-STORY-PHONE { display: none; } /* used as the 3rd layout of stories for each story page */
+
+.smallerStory { display: none; } /* holds the title and content of each scrolling box on Stories, NG, and each story page */
+
+.mainstory p { font-family: 'Raleway'; } /* only used for story symbol above each title's name */
+
+@media only screen and (max-width: 866px) { /* this is what i gots to change... */
+  .links { /* layout 1 */
+    display: none;
+  }
+
+  .smallerLinks3OnRow { /* layout 2 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .smallerLinks3OnRow div {
+    display: flex;
+    display: row;
+    align-items: center;
+  }
+
+  .smallerLinks3OnRow div div {
+    margin-left: 0.275em;
+    margin-right: 0.275em;
+  }
+
+  .smallerStory {
+    transition: box-shadow 0.95s;
+    margin-top: 2.8em;
+    padding-top: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 3px dotted #DBA869;
+    overflow-y: scroll;
+    color: Ivory;
+    opacity: 0.8;
+    text-align: center;
+  }
+
+  .smallerStory a { font-family: 'Handlee'; } /* needed for story box titles */
+
+  .smallerStory:hover { box-shadow: 0px 30px 100px rgba(219,168,105,.4); }
+  
+}
+
+/* Making Browser Smaller on Laptop/Desktop Stories */
+@media only screen and (max-width: 650px) { /* This also needs to be changed ! */
+  .links, .links-NG, .smallerLinks3OnRow {
+    display: none;
+  }
+
+  .smallerLinks, .smallerLinks-STORY-PHONE { /* Used as 3rd layout for story boxes on each story page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .smallerLinks div, .smallerLinks-STORY-PHONE div {
+    display: flex;
+    display: row;
+    align-items: center;
+  }
+
+  .smallerLinks div div, .smallerLinks-STORY-PHONE div div {
+    margin-left: 0.275em;
+    margin-right: 0.275em;
+  }
+
+  .smallerStory {
+    transition: box-shadow 0.95s;
+    margin-top: 2.8em;
+    padding-top: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 3px dotted #DBA869;
+    overflow-y: scroll;
+    color: Ivory;
+    opacity: 0.8;
+    text-align: center;
+  }
+
+  .smallerStory a {
+    font-family: 'Handlee';
+  }
+
+  .smallerStory:hover {
+    box-shadow: 0px 30px 100px rgba(219,168,105,.4);
+  }
+  
+  .smallerLinks-STORY-PHONE {
+      display: none;
+  }
+}
+
+/* iPhone 4 and 4S Stories (Portrait) CHECK TO SEE HOW THIS LOOKS  Empty */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+  }
+
+/* iPhone 5, 5S, 5C and 5SE Stories (Portrait) CHANGE THIS Empty && Absolutely needs to be changed */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+      
+    .links, .links-NG, .smallerLinks, #ralphTheGardenGnomeContainer {
+        display: none;
+    }
+
+    .smallerLinks-PHONE, .smallerLinks-STORY-PHONE { /* Used as 3rd layout for story boxes on each story page */
+    width: 100%;
+    margin-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .smallerLinks-PHONE div, .smallerLinks-STORY-PHONE div {
+      width: 95%;
+      display: flex;
+      display: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;  
+  }
+
+  .smallerLinks-PHONE div div {
+    margin-left: 0.275em;
+    margin-right: 0.275em;
+  }
+
+  .smallerLinks-PHONE .smallerStory {
+    transition: box-shadow 0.95s;
+    margin-top: 2.8em;
+    padding-top: 1.3rem;
+    width: 430px;
+    height: 390px;
+    border: 3px dotted #DBA869;
+    overflow-y: scroll;
+    color: Ivory;
+    opacity: 0.8;
+    border-radius: 3%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .smallerLinks-STORY-PHONE .smallerStory {
+    transition: box-shadow 0.95s;
+    margin-top: 2.8em;
+    padding-top: 1.3rem;
+    width: 100%;
+    height: 390px;
+    border: 3px dotted #DBA869;
+    overflow-y: scroll;
+    color: Ivory;
+    opacity: 0.8;
+    border-radius: 3%;  
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;*/
+  }
+  
+  .smallerLinks-STORY-PHONE .smallerStory p {
+      font-size: 40px;
+      line-height: 1.125em;
+  }
+  
+  #marigold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .smallerStory a {
+    font-family: 'Handlee';
+  }
+
+  .smallerStory a:nth-child(1) {
+    font-size: 75px;
+    text-align: center;
+  }
+
+  .smallerStory p a {
+    font-size: 50px;
+}
+
+  .smallerStory:hover {
+    box-shadow: 0px 30px 100px rgba(219,168,105,.4);
+  }
+   /* ************************************************ */ 
+
+    #stories {
+      justify-content: center;
+      width: 100%;
+      height: 7em;
+      font-size: 4.5em;
+    }
+
+    #storiesTitle {
+      padding-top: 15px;
+      color: #8DD1FC;
+      text-align: center;
+      font-size: 5.75rem;
+    }
+
+    #storiesDesc {
+      text-align: center;
+      font-size: 4.5rem;
+    }
+
+    .scroll {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+
+    /*.links {
+      display: none;
+    }*/
+
+    /*.smallerLinks {
+      width: 100%;
+      margin-top: 1.2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }*/
+
+    /*.smallerLinks div {
+      /*width: 85%;
+      width: 95%;
+      display: flex;
+      display: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }*/
+
+    /*.smallerLinks div div {
+      margin-left: 0.275em;
+      margin-right: 0.275em;
+    }*/
+
+    /*.smallerStory {
+      transition: box-shadow 0.95s;
+      margin-top: 2.8em;
+      padding-top: 1.3rem;
+      /*width: 390px;
+      width: 430px;
+      height: 390px;
+      border: 3px dotted #DBA869;
+      overflow-y: scroll;
+      color: Ivory;
+      opacity: 0.8;
+      border-radius: 3%;
+    }*/
+
+    /*.smallerStory a {
+      font-family: 'Handlee';
+      font-size: 3em;
+      text-align: center;
+    }*/
+
+    /*.smallerStory a:nth-child(2) {
+      font-size: 1.5em;
+    }*/
+
+    .smallerStory p {
+      font-size: 2.2em;
+      text-align: center;
+    }
+
+    /*.smallerStory:hover {
+      box-shadow: 0px 30px 100px rgba(219,168,105,.4);
+    }*/
+    
+    #fateBeStrangeContainer {
+        margin-top: 20px;
+    }
+    
+    #fateBeStrangeContainer section {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: 500px;
+    }
+    
+    #fateBeStrangeContainer section #stories {
+        display: flex;
+        text-align: center;
+        height: 7em;
+        font-size: 60px;
+    }
+
+}
+
+/* iPhone 6, 6S, 7 and 8 Stories (Portrait) IS THIS THE SAME AS iPHONE X ? Empty && Absolutely needs to be changed */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+      
+    .links, .links-NG, .smallerLinks {
+        display: none;
+    }
+
+    .smallerLinks-PHONE, .smallerLinks-STORY-PHONE { /* Used as 3rd layout for story boxes on each story page */
+    width: 100%;
+    margin-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .smallerLinks-PHONE div, .smallerLinks-STORY-PHONE div {
+      width: 95%;
+      display: flex;
+      display: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;  
+  }
+
+  .smallerLinks-PHONE div div {
+    margin-left: 0.275em;
+    margin-right: 0.275em;
+  }
+
+  .smallerLinks-PHONE .smallerStory{
+    transition: box-shadow 0.95s;
+    margin-top: 2.8em;
+    padding-top: 1.3rem;
+    width: 430px;
+    height: 390px;
+    border: 3px dotted #DBA869;
+    overflow-y: scroll;
+    color: Ivory;
+    opacity: 0.8;
+    border-radius: 3%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .smallerLinks-STORY-PHONE .smallerStory {
+    transition: box-shadow 0.95s;
+    margin-top: 2.8em;
+    padding-top: 1.3rem;
+    width: 100%;
+    height: 390px;
+    border: 3px dotted #DBA869;
+    overflow-y: scroll;
+    color: Ivory;
+    opacity: 0.8;
+    border-radius: 3%;  
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;*/
+  }
+  
+  .smallerLinks-STORY-PHONE .smallerStory p {
+      font-size: 40px;
+      line-height: 1.125em;
+  }
+  
+  #marigold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .smallerStory a {
+    font-family: 'Handlee';
+  }
+
+  .smallerStory a:nth-child(1) {
+    font-size: 75px;
+    text-align: center;
+  }
+  
+  .smallerStory p a {
+    font-size: 50px;
+}
+
+  .smallerStory:hover {
+    box-shadow: 0px 30px 100px rgba(219,168,105,.4);
+  }
+   /* ************************************************ */ 
+
+    #stories {
+      justify-content: center;
+      width: 100%;
+      height: 7em;
+      font-size: 4.5em;
+    }
+
+    #storiesTitle {
+      padding-top: 15px;
+      color: #8DD1FC;
+      text-align: center;
+      font-size: 5.75rem;
+    }
+
+    #storiesDesc {
+      text-align: center;
+      font-size: 4.5rem;
+    }
+
+    .scroll {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+
+    /*.links {
+      display: none;
+    }*/
+
+    /*.smallerLinks {
+      width: 100%;
+      margin-top: 1.2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }*/
+
+    /*.smallerLinks div {
+      /*width: 85%;
+      width: 95%;
+      display: flex;
+      display: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }*/
+
+    /*.smallerLinks div div {
+      margin-left: 0.275em;
+      margin-right: 0.275em;
+    }*/
+
+    /*.smallerStory {
+      transition: box-shadow 0.95s;
+      margin-top: 2.8em;
+      padding-top: 1.3rem;
+      /*width: 390px;
+      width: 430px;
+      height: 390px;
+      border: 3px dotted #DBA869;
+      overflow-y: scroll;
+      color: Ivory;
+      opacity: 0.8;
+      border-radius: 3%;
+    }*/
+
+    /*.smallerStory a {
+      font-family: 'Handlee';
+      font-size: 3em;
+      text-align: center;
+    }*/
+
+    /*.smallerStory a:nth-child(2) {
+      font-size: 1.5em;
+    }*/
+
+    .smallerStory p {
+      font-size: 2.2em;
+      text-align: center;
+    }
+
+    /*.smallerStory:hover {
+      box-shadow: 0px 30px 100px rgba(219,168,105,.4);
+    }*/
+    
+    #fateBeStrangeContainer {
+        margin-top: 20px;
+    }
+    
+    #fateBeStrangeContainer section {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: 500px;
+    }
+    
+    #fateBeStrangeContainer section #stories {
+        display: flex;
+        text-align: center;
+        height: 7em;
+        font-size: 60px;
+    }
+
+}
+
+/* footer */
+
+footer { z-index: 201; }
+
+footer div {
+  z-index: 2000;
+  padding-top: 1.6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* iPhone 4 and 4S Footer (Portrait) CHECK TO SEE HOW THIS LOOKS Empty */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+
+  }
+
+/* iPhone 5, 5S, 5C and 5SE Footer (Portrait) Empty */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+      
+    footer div {
+        font-size: 35px;
+    }  
+    
+    /*footer {
+      margin-bottom: -20.5em;
+    }
+
+    footer div {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+
+    footer div a img {
+      height: 100px;
+      width: 100px;
+      margin-top: 0.7rem;
+    }*/
+}
+
+/* iPhone 6, 6S, 7 and 8 Footer (Portrait) IS THIS THE SAME AS iPHONE X ? */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+      
+    footer div {
+        font-size: 35px;
+    }  
+
+    /*footer {
+      margin-bottom: -20.5em;
+    }
+
+    footer div {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+
+    footer div a img {
+      height: 100px;
+      width: 100px;
+      margin-top: 0.7rem;
+    } */
+}
+
+/*-------Tidbits of Nonsensical Gibberish--------*/
+
+#ralph { background-color: #1F797D; }
+
+#pigeon { background-color: #3C3FA1; }
+
+#pancake { background-color: #A13C53; }
+
+#apple {
+  background: url("RussiaTrip.JPG") no-repeat left center;
+  color: black;
+}
+
+#humphrey { background-color: #01162E; }
+
+#frog { background-color: #00593C; }
+
+#evergreen {
+  background: url("Pond.JPG") no-repeat bottom center;
+  color: black;
+}
+
+#cow { background-color: #424D4F; }
+
+#englightenment { background-color: #071532; }
+
+/* iPhone 4 and 4S Tidbits of Nonsensical Gibberish (Portrait)
+   CHECK TO SEE HOW THIS LOOKS Empty*/
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+
+  }
+
+/* iPhone 5, 5S, 5C and 5SE Tidbits of Nonsensical Gibberish (Portrait) Keep as is??? */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    #pigeon, #pancake, #apple, #humphrey, #frog, #evergreen, #cow, #englightenment {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+}
+
+/* iPhone 6, 6S, 7 and 8 Tidbits of Nonsensical Gibberish (Portrait)
+   IS THIS THE SAME AS iPHONE X ? Keep as is???*/
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    #pigeon, #pancake, #apple, #humphrey, #frog, #evergreen, #cow, #englightenment {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+}
+
+/* ----------- Videos ------------ */
+
+#containerVids {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#allVids {
+  margin-top: 1em;
+  border: 3px dotted #DBA869;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgba(89,55,54,0.8);
+}
+
+#vidDesc {
+  opacity: 0.7;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.shorty { margin-top: 0.75em; }
+
+/* iPhone 4 and 4S Videos (Portrait) CHECK TO SEE HOW THIS LOOKS Empty */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+
+  }
+
+/* iPhone 5, 5S, 5C and 5SE Videos (Portrait) change to make better */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    #vidDesc {
+      z-index: 400;
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    #allVids {
+      width: 25%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      border: none;
+      background-color: #6B3B54;
+      transform: scale(2.75);
+      margin-top: 100%;
+    }
+    
+    #containerVids {
+        margin-bottom: 95%;
+    }
+    
+}
+
+/* iPhone 6, 6S, 7 and 8 Videos (Portrait) IS THIS THE SAME AS iPHONE X ? change to make better */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    #vidDesc {
+      z-index: 400;
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    #allVids {
+      width: 25%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      border: none;
+      background-color: #6B3B54;
+      transform: scale(2.75);
+      margin-top: 100%;
+    }
+    
+    #containerVids {
+        margin-bottom: 95%;
+    }
+
+}
+
+/* ----------- About Me PART 2 : Combine both once everything's settled ------------ */
+.menu { z-index: 50000; }
+
+.containerFate {
+  font-family: 'Dosis';
+  padding: 0.5em 0 1.2em 0;
+  border: 3px dotted #DBA869;
+  border-top: none;
+  width: 80%;
+  background-color: #00415E;
+  color: #D6D6CA;
+}
+
+.mainstoryFate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainstoryTitleFate {
+  font-family: 'Handlee';
+  padding: 0.3em 0 0;
+  font-size: 1.9em;
+}
+
+.containerFate .mainstoryFate p {
+  font-size: 20px;
+  line-height: 1.125em;
+  text-align: center;
+}
+
+.fateStory {
+  display: flex;
+  justify-content: center;
+  font-family: 'Dosis';
+}
+
+.fateStory p {
+  word-spacing: 0.03rem;
+  line-height: 1.22rem;
+  padding: 0 .5em;
+  text-align: center;
+}
+
+#Fate {
+  z-index: 200;
+  text-align: center;
+  background-color: #3C3F51;
+  border: 3px solid rgba(141,209,252,0.5);
+  border: 3px dotted #DBA869;
+  font-family: 'Dosis';
+}
+
+#me {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5em;
+  background-color: #3C3F51;
+  border: 3px solid rgba(141,209,252,0.5);
+}
+
+.heck { margin: 2em 0 2em 0; }
+
+#possum {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(90deg);
+  width: 300px;
+  height: 250px;
+  border-radius: 100%;
+  border: 2px solid Ivory;
+  margin-bottom: 10px;
+}
+
+#moveFate {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  font-family: 'Dosis';
+  padding: 0.5em 0 1.2em 0;
+  border-top: none;
+  width: 80%;
+  color: #D6D6CA;
+}
+
+/* iPhone 4 and 4S About Me (Portrait) CHECK TO SEE HOW THIS LOOKS Empty*/
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+
+  }
+
+/* iPhone 4 and 4S About Me (Landscape) CHECK TO SEE HOW THIS LOOKS Empty*/
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: landscape) {
+
+  }
+
+/* iPhone 5, 5S, 5C and 5SE About Me (Portrait) Keep as is */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    #possum {
+      transform: rotate(360deg);
+      /*width: 450px;
+      height: 500px;*/
+      width: 650px;
+      height: 700px;
+    }
+    
+    /*#hoot {
+    transform: scale(1.95);
+    margin-bottom: 0;
+    margin-top: 275px; /* remove margin-bottom 
+  }*/
+  
+  .containerFate {
+        width: 95%;
+    }
+    
+    .mainstoryTitleFate {
+        font-size: 65px;
+        /*padding: 0;*/
+        padding-top: 0.75;
+    }
+    
+    .containerFate .mainstoryFate p {
+        font-size: 55px;
+    }
+  
+  #aboutMePushFooter {
+      margin-top: 645px;
+      padding-top: 0;
+      font-size: 35px;
+  }
+}
+
+/* iPhone 5, 5S, 5C and 5SE About Me (Landscape) CHECK TO SEE HOW THIS LOOKS Empty */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: landscape) {
+
+}
+
+/* iPhone 6, 6S, 7 and 8 About Me (Portrait) IS THIS THE SAME AS iPHONE X ? Keep as is */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    #possum {
+      transform: rotate(360deg);
+      /*width: 450px;
+      height: 500px;*/
+      width: 650px;
+      height: 700px;
+    }
+    
+    /*#hoot {
+    transform: scale(1.95);
+    margin-bottom: 0;
+    margin-top: 275px; /* remove margin-bottom 
+  }*/
+  
+  .containerFate {
+        width: 95%;
+    }
+    
+    .mainstoryTitleFate {
+        font-size: 65px;
+        /*padding: 0;*/
+        padding-top: 0.75;
+    }
+    
+    .containerFate .mainstoryFate p {
+        font-size: 55px;
+    }
+  
+  #aboutMePushFooter {
+      margin-top: 645px;
+      padding-top: 0;
+      font-size: 35px;
+  }
+}
+
+/* iPhone 6, 6S, 7 and 8 About Me (Landscape)
+   IS THIS THE SAME AS iPHONE 6+, 7+ AND 8+ ... AND iPHONE X ? Keep as is */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: landscape) {
+    #possum {
+      transform: rotate(360deg);
+      width: 250px;
+      height: 300px;
+    }
+}
+
+/* ----------- Main Stories ----------- */
+
+/* put the main stories options at the bottom of each story page ...
+but only do this once Stories and NG is resolved */
+
+.containerStory { /* Contains the main story on each page */
+  padding: 0.5em 0 1.2em 0;
+  border: 3px dotted #DBA869;
+  border-top: none;
+  width: 80%;
+  background-color: #00415E;
+  color: #D6D6CA;
+}
+
+.mainstory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainstory p { text-align: left; }
+
+.mainstoryTitle {
+  padding: 0.3em 0;
+  font-size: 1.9em;
+}
+
+.mainstorySubtitle {
+  padding: 0.2em 0;
+  font-size: 1.259em;
+}
+
+.mainstory div { padding-top: 0.45em; }
+
+#FF { background-color: #6E4443; }
+
+#TCS { background-color: #3C3F51; }
+
+#APD { background-color: #541F4E; }
+
+#M { background-color: #946650; }
+
+/* iPhone 4 and 4S Main Stories (Portrait) CHECK TO SEE HOW THIS LOOKS Empty */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+
+  }
+
+/* iPhone 5, 5S, 5C and 5SE Main Stories (Portrait) keep it this way */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+
+    .containerStory {
+      width: 90%;
+    }
+    
+    #APD .mainstoryTitle {
+        text-align: center;
+    }
+    
+    #M p {
+        text-align: center;
+    }
+    
+    .containerStory p {
+        font-size: 40px;
+        line-height: 1.125em;
+        width: 85%;
+    }
+    
+    .storySymbol {
+        font-size: 1.75em;
+    }
+
+    .mainstory {
+      width: 100%;
+      font-style: 'Raleway'; /* put this elsewhere ? */
+      font-size: 3em;
+    }
+    
+    .mainstoryTitle {
+        padding: 0.45em 0 0 0;
+        margin-bottom: -0.15em;
+        font-size: 1.9em;
+    }
+
+    .mainstorySubtitle {
+      /*padding: 0.2em 0;*/
+      margin-top: 0.40em;
+      margin-bottom: -0.5em;
+      font-size: 1.259em;
+    }
+    
+}
+
+/* iPhone 6, 6S, 7 and 8 Main Stories (Portrait) IS THIS THE SAME AS iPHONE X ? */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+
+    .containerStory {
+      width: 90%;
+    }
+    
+    #APD .mainstoryTitle {
+        text-align: center;
+    }
+    
+    #M p {
+        text-align: center;
+    }
+    
+    .containerStory p {
+        font-size: 40px;
+        line-height: 1.125em;
+        width: 85%;
+    }
+    
+    .storySymbol {
+        font-size: 1.75em;
+    }
+
+    .mainstory {
+      width: 100%;
+      font-style: 'Raleway'; /* put this elsewhere? */
+      font-size: 3em;
+    }
+    
+    .mainstoryTitle {
+        padding: 0.45em 0 0 0;
+        margin-bottom: -0.15em;
+        font-size: 1.9em;
+    }
+
+    .mainstorySubtitle {
+      /*padding: 0.2em 0;*/
+      margin-top: 0.40em;
+      margin-bottom: -0.5em;
+      font-size: 1.259em;
+    }
+    
+
+}
+
+/* ******************************* Mr Cloud of Love ************************ */
+
+#mrcloud {
+  margin: auto;
+  position: relative;
+  height: 600px;
+  width: 500px;
+  margin-top: -50px;
+  margin-bottom: -135px;
+}
+
+#container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -30%;
+}
+
+.box {
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  border-radius: 40%;
+  background-image: linear-gradient(#11717F, #D9717F);
+}
+
+.blob {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  top: 7%;
+  animation-name: upAndDown;
+  animation-duration: 48s;
+  animation-duration: 16s;
+  animation-duration: 48s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  border: 3px solid transparent; /* fix this later */
+}
+
+.blob2 {
+  transform: scale(.35);
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  top: 7%;
+  border: 3px solid transparent; /* fix this later */
+
+  margin-left: -105%;
+  margin-top: -147.5%;
+}
+
+.hair {
+  top: 18%;
+  z-index: 1;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid #F7F7F7;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-radius: 20%;
+}
+
+#hair1 {
+  left: 39%;
+  transform: skewX(30deg);
+}
+
+#hair2 {
+  left: 44%;
+  transform: skewX(30deg);
+}
+
+#hair3 { left: 49%; }
+
+#hair4 {
+  left: 54%;
+  transform: skewX(-30deg);
+}
+
+#hair5 {
+  left: 59%;
+  transform: skewX(-30deg);
+}
+
+.eyebrow {
+  position: absolute;
+  background-color: transparent;
+  width: 8%;
+  height: 8%;
+  border-radius: 50%;
+  box-shadow: 3px 3px 0px 0px #F7F7F7;
+  transform: rotate(-135deg);
+}
+
+#eyebrow1 {
+  z-index: 1;
+  left: 40%;
+  top: 33%;
+}
+
+#eyebrow2 {
+  z-index: 1;
+  left: 52%;
+  top: 33%;
+}
+
+/* ********* HEAD (Eyes, nose, beard, mouth) *********** */
+
+.blob-top {
+  position: relative;
+  top: 10%;
+  border: 3px solid #D9A071;
+  margin: auto;
+  margin-top: 15%;
+  background: #FFE1A9;
+  width: 35%;
+  height: 35%;
+  border-radius: 60% 60% 90% 90%;
+}
+
+.left-eye {
+  position: relative;
+  border-radius: 50%;
+  top: 34%;
+  left: 25%;
+  background: black;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.right-eye {
+  position: relative;
+  border-radius: 50%;
+  top: 24%;
+  left: 60%;
+  background: black;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.centerEye {
+  position: relative;
+  top: 15%;
+  margin: auto;
+  border-radius: 50%;
+  background: white;
+  width: 37%;
+  height: 37%;
+}
+
+.nose {
+  position: relative;
+  top: 35%;
+  border: 3px solid #D9A071;
+  width: 5%;
+  left: 45%;
+}
+
+.circ {
+  background-color: #F7F7F7;
+  border-radius: 50%;
+  border: 2px solid white;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  width: 30px;
+  height: 30px;
+}
+
+#circle1 {
+  border-left: 2px solid white;
+  z-index: 2;
+  position: relative;
+  left: 0%;
+  top: 41%;
+}
+
+#circle2 {
+  z-index: 3;
+  position: relative;
+  left: 23%;
+  top: 8.5%;
+}
+
+#circle3 {
+  z-index: 4;
+  position: relative;
+  left: 46%;
+  top: -24%;
+}
+
+#circle4 {
+  border-right: 2px solid white;
+  z-index: 5;
+  position: relative;
+  left: 68%;
+  top: -57%;
+}
+
+#circle5 {
+  border-left: 2px solid white;
+  z-index: 6;
+  position: relative;
+  left: 11%;
+  top: -63%;
+}
+
+#circle6 {
+  z-index: 7;
+  position: relative;
+  left: 34%;
+  top: -95.5%;
+}
+
+#circle7 {
+  border-right: 2px solid white;
+  z-index: 8;
+  position: relative;
+  left: 57.5%;
+  top: -128%;
+}
+
+#circle8 {
+  border-left: 2px solid white;
+  z-index: 9;
+  position: relative;
+  left: 22.1%;
+  top: -135%;
+}
+
+#circle9 {
+  border-right: 2px solid white;
+  z-index: 10;
+  position: relative;
+  left: 45%;
+  top: -167.5%;
+}
+
+#circle10 {
+  border: 2px solid white;
+  z-index: 11;
+  position: relative;
+  left: 34%;
+  top: -174%;
+}
+
+.mouth {
+  animation-name: mouth;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  z-index: 12;
+  position: relative;
+  background-color: black;
+  height: 10px;
+  width: 20px;
+  top: -272%;
+  left: 41%;
+  border-radius: 50%;
+}
+
+/* ********************* BOTTOM ************************* */
+
+.blob-bottom {
+  z-index: 1;
+  position: relative;
+  border: 3px solid #315B68;
+  margin: auto;
+  top: -279.75%;
+  left: -14%;
+  background: #2B505B;
+  width: 123%;
+  height: 187%;
+  border-radius: 40%;
+}
+
+.heartOriginal {
+  animation-name: heart;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  z-index: 12;
+  position: absolute;
+  background-color: #E86668;
+  width: 20px;
+  height: 20px;
+  top: 212.5%;
+  left: 41.5%;
+  transform: rotate(-135deg);
+}
+
+.circleHeartPartsOriginal {
+  position: relative;
+  background-color: #E86668;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#left-sideOriginal {
+  z-index: 13;
+  top: 50%;
+  left: 0%;
+}
+
+#right-sideOriginal {
+  z-index: 14;
+  top: -100%;
+  left: 50%;
+}
+
+/* ******************* KEYFRAMES ************************ */
+
+@keyframes upAndDown {
+  0% {
+
+  }
+  66% {
+    margin-top: 0%;
+  }
+  70%, 75% {
+    margin-top: 24.6%;
+  }
+  83% {
+    margin-top: 0%;
+  }
+  91%, 96% {
+    margin-top: -23%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1) rotate(-135deg);
+  }
+  50% {
+    transform: scale(0.6) rotate(-135deg);
+  }
+}
+
+#hoot {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 20%;
+  transform: scale(0.85);
+  width: 500px;
+  /*height: 700px;             RECENT CHANGE */
+  margin-top: -10%;
+  margin-bottom: -21.5%;
+}
+
+.moonBlock {
+  margin: auto;
+  z-index: 600;
+  background-color: #6B3B54;
+  width: 500px;
+  height: 150px;
+  margin-top: -100%;
+  /*margin-top: 0;              RECENT CHANGE */
+}
+
+#block-moon {
+  position: relative;
+  z-index: 602;
+  margin: auto;
+  height: 100%;
+  width: 30%;
+  background-color: #6B3B54;
+  margin-left: 35%;
+}
+
+#block-sun {
+  position: relative;
+  z-index: 602;
+  margin: auto;
+  width: 30%;
+  height: 100%;
+  background-color: #6B3B54;
+  margin-left: 35%;
+}
+
+.sunBlock {
+  margin: auto;
+  z-index: 600;
+  background-color: #6B3B54;
+  width: 500px;
+  height: 150px;
+  margin-top: 100%;
+}
+
+#sun {
+  animation-name: sun;
+  animation-duration: 48s;
+  animation-duration: 16s;
+  animation-duration: 48s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  z-index: 60;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #FD8C00;
+  transform: scale(0.69);
+  position: relative;
+  top: -47%;
+  margin: auto;
+  margin-top: -11%;
+}
+
+#moon {
+  animation-name: moon;
+  animation-duration: 48s;
+  animation-duration: 16s;
+  animation-duration: 48s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  z-index: 70;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 3px 3px 0 0 #F7FFDC;
+  top: -98.5%;
+  margin: auto;
+  z-index: 55;
+  left: -2%;
+  margin-top: 7.5%;
+}
+
+@keyframes moon {
+  66% {
+    margin-top: 7.5%;
+  }
+  70%, 75% {
+    margin-top: 34.5%;
+  }
+  83% {
+    margin-top: -1%;
+  }
+  91%, 96% {
+    margin-top: 7.5%;
+  }
+  100% {
+    margin-top: 7.5%;
+  }
+}
+
+.elongated {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-bottom: 37.5px solid #FFA300;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-radius: 20%;
+}
+
+#e1 {
+  left: 43%;
+  top: -70%;
+}
+
+#e2 {
+  left: -18%;
+  top: -108%;
+  transform: rotate(-45deg);
+}
+
+#e3 {
+  left: -45%;
+  top: -105%;
+  transform: rotate(-90deg);
+}
+
+#e4 {
+  left: -20%;
+  top: -103%;
+  transform: rotate(-135deg);
+}
+
+#e5 {
+  left: 43%;
+  top: -140%;
+  transform: rotate(-180deg);
+}
+
+#e6 {
+  left: 108%;
+  top: -228%;
+  transform: rotate(-225deg);
+}
+
+#e7 {
+  left: 135%;
+  top: -355%;
+  transform: rotate(-270deg);
+}
+
+#e8 {
+  left: 108%;
+  top: -484%;
+  transform: rotate(45deg);
+}
+
+@keyframes sun {
+  66% { /*66.666% */
+    margin-top: -11%;
+  }
+  70%, 75% { /* 70.791%, 73.541% */
+    margin-top: -11%;
+  }
+  83% { /* 83.166% */
+    margin-bottom: 11%;
+    margin-top: -11%;
+  }
+  91%, 96% { /* 92.791%, 95.541% */
+    margin-top: -41.5%;
+    margin-bottom: 41.5%;
+  }
+  100% {
+    margin-top: -11%;
+    margin-bottom: 11%;
+  }
+}
+
+#eyelid1 {
+  animation-name: eyelid1;
+  animation-duration: 16s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  z-index: 1000;
+  position: absolute;
+  top: 22%;
+  left: 24.5%;
+  background-color: #FFE1A9;
+  width: 16%;
+  height: 11%;
+  border-radius: 50% 50% 20% 20%;
+}
+
+#eyelid2 {
+  animation-name: eyelid2;
+  animation-duration: 16s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  z-index: 1000;
+  position: absolute;
+  top: 22%;
+  left: 59.5%;
+  background-color: #FFE1A9;
+  width: 16%;
+  height: 11%;
+  border-radius: 50% 50% 20% 20%;
+}
+
+@keyframes eyelid1 {
+  0% {
+    top: 22%;
+  }
+  32% {
+    top: 22%;
+  }
+  33% {
+    top: 33%;
+  }
+  34.5% {
+    top: 22%;
+  }
+  90% {
+    top: 22%;
+  }
+  91% {
+    top: 33%;
+  }
+  92.5% {
+    top: 22%;
+  }
+  100% {
+    top: 22%;
+  }
+}
+
+@keyframes eyelid2 {
+  0% {
+    top: 22%;
+  }
+  32% {
+    top: 22%;
+  }
+  33% {
+    top: 33%;
+  }
+  34.5% {
+    top: 22%;
+  }
+  90% {
+    top: 22%;
+  }
+  91% {
+    top: 33%;
+  }
+  92.5% {
+    top: 22%;
+  }
+  100% {
+    top: 22%;
+  }
+}
+
+/* iPhone 5, 5S, 5C and 5SE About Me (Portrait) Keep as is */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    
+    #hoot {
+    transform: scale(1.95);
+    margin-bottom: 0;
+    margin-top: 275px;  /* remove margin-bottom */
+  }
+  
+}
+
+/* iPhone 6, 6S, 7 and 8 About Me (Portrait) IS THIS THE SAME AS iPHONE X ? Keep as is */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    
+    #hoot {
+    transform: scale(1.95);
+    margin-bottom: 0;
+    margin-top: 275px;  /* remove margin-bottom */
+  }
+  
+}
+
+/*********** Symbol **************/
+
+#boundary {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  position: relative;
+  transform: scale();
+}
+
+#symbol {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+.hat {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-radius: 20%;
+  border-bottom: 200px solid #F7F7F7;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+}
+
+#hat1 { /*two*/
+  z-index: 3;
+  transform: rotate(-45deg);
+  top: -9.75%;
+  left: 21.75%;
+  border-bottom-color: #1F797D;
+}
+
+#hat2 { /*three*/
+  border-bottom-color: #33C5CC;
+  transform: rotate(-90deg);
+  top: -100.25%;
+  left: 25%;
+}
+
+#hat3 { /*one --> origin*/
+  border-bottom-color: #33C5CC;
+  left: 42%;
+  top: -213.6%;
+}
+
+#hat4 { /*four*/
+  z-index: 6;
+  transform: rotate(-135deg);
+  top: -290%;
+  left: 22%;
+  border-bottom-color: #1F797D;
+}
+
+#hat5 { /*five*/
+  border-bottom-color: #33C5CC;
+  transform: rotate(-180deg);
+  left: 42%;
+  top: -386%;
+}
+
+#hat6 { /*six*/
+  z-index: 6;
+  transform: rotate(-225deg);
+  top: -489.5%;
+  left: 62.25%;
+  border-bottom-color: #1F797D;
+}
+
+#hat7 { /*seven*/
+  border-bottom-color: #33C5CC;
+  transform: rotate(-270deg);
+  top: -600.25%;
+  left: 59%;
+}
+
+#hat8 { /*eight*/
+  z-index: 8;
+  transform: rotate(-315deg);
+  top: -709.55%;
+  left: 61.75%;
+  border-bottom-color: #1F797D;
+}
+
+.heart {
+  animation-name: heart2;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  z-index: 12;
+  position: relative;
+  background-color: #33C5CC;
+  width: 10px;
+  height: 10px;
+  top: -751.75%;
+  left: 47.5%;
+  transform: rotate(225deg);
+}
+
+.circleHeartParts {
+  position: relative;
+  background-color: #33C5CC;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+#left-side {
+  z-index: 13;
+  top: 50%;
+  left: 0%;
+}
+
+#right-side {
+  z-index: 14;
+  top: -100%;
+  left: 50%;
+}
+
+@keyframes heart2 {
+  0% {
+    transform: scale(1) rotate(-135deg);
+  }
+  50% {
+    transform: scale(0.6) rotate(-135deg);
+  }
+}
+
+#titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+.title {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* */
+  justify-content: center;
+  font-family: "Dosis";
+  color: Ivory;
+  height: 200px;
+  width: 200px;
+  font-size: 6rem;
+  top: -114.5%;
+}
+
+#silent {
+  left: -100%;
+  left: -85%;
+}
+
+#wyrd {
+  right: -100%;
+  right: -80%;
+}
+
+#main {
+  display: flex; /* */
+  flex-direction: column; /* */
+  margin: auto;
+  height: 400px;
+  width: 400px;
+  margin-bottom: 0px;
+}
+
+#mainest {
+  background-color: #6B3B54;
+  transform: scale(1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  height: 450px;
+  width: auto;
+  margin-top: 114.5px;
+  margin-bottom: -14.5px;
+}
+
+@media only screen and (max-width: 814px) {
+  #mainest {
+    margin-top: 101px;
+    margin-bottom: -60px;
+    transform: scale(0.85);
+  }
+}
+
+@media only screen and (max-width: 693px) { /* was 686px */
+  #titleContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #silent {
+    margin-top: 0%;
+    margin-left: 167.75%;
+  }
+
+  #wyrd {
+    margin-top: 195%;
+    margin-left: -155%;
+  }
+
+  #mainest {
+    height: 450px;
+    margin-top: 101px;
+    margin-bottom: -60px;
+  }
+}
+
+/* iPhone 5, 5S, 5C and 5SE About Me (Portrait) Keep as is */
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 568px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    
+    #mainest {
+    margin-top: 300px;
+    margin-bottom: 100px;
+    transform: scale(1.25);
+  }
+  
+  /*#titleContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #silent {
+    margin-top: 0%;
+    margin-left: 167.75%;
+  }
+
+  #wyrd {
+    margin-top: 195%;
+    margin-left: -155%;
+  }
+
+  #mainest {
+    height: 450px;
+    margin-top: 300px;
+    margin-bottom: 0;
+    /*transform: scale(2);
+  }
+  
+  #main {
+      transform: scale();
+  }*/
+  
+}
+
+/* iPhone 6, 6S, 7 and 8 About Me (Portrait) IS THIS THE SAME AS iPHONE X ? Keep as is */
+@media only screen and
+  (min-device-width: 375px) and
+  (max-device-width: 667px) and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (orientation: portrait) {
+    
+  /*  #titleContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #silent {
+    margin-top: 0%;
+    margin-left: 167.75%;
+    /*transform: scale(1.5);
+  }
+
+  #wyrd {
+    margin-top: 195%;
+    margin-left: -155%;
+    /*transform: scale(1.5);
+  }
+
+  #mainest {
+    height: 450px;
+    margin-top: 450px;
+    margin-bottom: 250px;
+    /*transform: scale(1.5);
+  }
+  
+  #symbol {
+      transform: scale();
+  }*/
+  
+}
